@@ -29,7 +29,7 @@ $r->addRoute('comments/:ID', 'PUT', 'CommentsController', 'UpdateComment');
 $r->addRoute('comments/:ID', 'DELETE', 'CommentsController', 'DeleteComment');
 
 //TOKEN
-$r->addRoute('auth/token', 'GET', 'UserApiController', 'getToken'); 
+$r->addRoute('auth/token', 'GET', 'LoginApiController', 'getToken'); 
 
 $r->route($_GET['resource'], $_SERVER['REQUEST_METHOD']);
 
