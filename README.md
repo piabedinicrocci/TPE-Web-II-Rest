@@ -105,6 +105,13 @@ API para modelar y manejar productos y sus comentarios, a la vez que se los cate
 
 ---
 
+#### Obtener comentarios con Order y Sort
+`/api/comments/{order}/{sort}` se utiliza para obtener una lista de todos los comentarios existentes ordenados según el campo especificado Order y de manera ascendente o descendentemente según lo indique Sort.
+
+**Método HTTP:** `GET`
+
+---
+
 #### Insertar comentario
 `/api/comments` se utiliza para agregar un nuevo comentario. Es necesario especificar los campos a insertar en el body.
 

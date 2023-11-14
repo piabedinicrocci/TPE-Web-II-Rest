@@ -29,21 +29,21 @@ class CommentsController extends ApiController {
         }
     }
 
-    // function GetCommentsOS($params = []) {
-    //     if (empty($params)) {
-    //         $this->view->response('Indique los parámetros Order y Sort', 404);
-    //         return;
-    //     } else {
-    //         $comentarios = $this->model->GetComments($params[':ORDER'],$params[':SORT']);
-    //         if (!empty($comentarios)) {
-    //                 $this->view->response($comentarios, 200);
-    //                 return;
-    //         } else {
-    //             $this->view->response('No hay comentarios', 404);
-    //             return;
-    //         }
-    //     }
-    // }
+    function GetCommentsOS($params = []) {
+        if (empty($params)) {
+            $this->view->response('Indique los parámetros Order y Sort', 404);
+            return;
+        } else {
+            $comentarios = $this->model->GetCommentsOS($params[':ORDER'],$params[':SORT']);
+            if (!empty($comentarios)) {
+                    $this->view->response($comentarios, 200);
+                    return;
+            } else {
+                $this->view->response('No hay comentarios', 404);
+                return;
+            }
+        }
+    }
 
     // function GetCommentsOS($params = []) {
     //     $sort = 'id_comentario';

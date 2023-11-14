@@ -23,7 +23,7 @@ $r->addRoute('categories/:ID', 'DELETE', 'CategoriesController', 'DeleteCategory
 //COMENTARIOS
 $r->addRoute('comments', 'GET', 'CommentsController', 'GetComments');
 $r->addRoute('comments/:ID', 'GET', 'CommentsController', 'GetComments');
-// $r->addRoute('comments/:ORDER/:SORT', 'GET', 'CommentsController', 'GetCommentsOS');
+$r->addRoute('comments/:ORDER/:SORT', 'GET', 'CommentsController', 'GetCommentsOS');
 $r->addRoute('comments', 'POST', 'CommentsController', 'InsertComment');
 $r->addRoute('comments/:ID', 'PUT', 'CommentsController', 'UpdateComment');
 $r->addRoute('comments/:ID', 'DELETE', 'CommentsController', 'DeleteComment');

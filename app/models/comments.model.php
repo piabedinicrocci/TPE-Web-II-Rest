@@ -15,11 +15,11 @@ class CommentsModel {
         return $sentencia->fetchAll(PDO::FETCH_OBJ);
     }
     // OBTENGO COMENTARIOS ORDENADOS POR UN CAMPO Y EN FORMA ASCENDENTE O DESCENDENTE
-    // function GetCommentsOS($order, $sort){
-    //     $sentencia = $this->db->prepare("SELECT * FROM comentario ORDER BY $order $sort");
-    //     $sentencia->execute();
-    //     return $sentencia->fetchAll(PDO::FETCH_OBJ);
-    // }
+    function GetCommentsOS($order, $sort){
+        $sentencia = $this->db->prepare("SELECT * FROM comentario ORDER BY $order $sort");
+        $sentencia->execute();
+        return $sentencia->fetchAll(PDO::FETCH_OBJ);
+    }
     // BUSCO COMENTARIOS POR ID
     function GetCommentById($comment_id){
         $sentencia = $this->db->prepare("SELECT * FROM comentario WHERE id_comentario=?");
